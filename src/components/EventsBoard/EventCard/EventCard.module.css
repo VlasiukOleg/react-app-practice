@@ -1,0 +1,37 @@
+.eventCard {
+  position: relative;
+  outline: 2px dashed skyblue;
+  padding: 10px;
+  border-radius: 4px;
+  /* padding-right: 50px; */
+  flex-basis: calc((100% - 40px) / 4);
+}
+
+.info {
+  display: flex;
+
+  align-items: center;
+}
+
+.icon {
+  margin-right: 5px;
+}
+
+.type {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.free {
+  background-color: rgb(22, 146, 22);
+}
+
+.paid {
+  background-color: rgb(10, 114, 156);
+}

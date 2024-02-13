@@ -1,5 +1,9 @@
-import { Alert } from "./components/Alert";
+import { Alert } from "components/Alert";
 import "./App.css";
+import { PageTitle } from "components/EventsBoard/PageTitle/PageTitle";
+import { EventsList } from "components/EventsBoard/EventsList/EventsList";
+
+import upcomingEvents from "upcoming-events.json";
 
 function App() {
   return (
@@ -16,6 +20,8 @@ function App() {
       <Alert variant="warning">
         Please update your profile contact information
       </Alert>
+      <PageTitle title="Events Board Title" />
+      <EventsList events={upcomingEvents} />
     </div>
   );
 }
