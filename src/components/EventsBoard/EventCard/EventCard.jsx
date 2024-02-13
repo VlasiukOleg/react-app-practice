@@ -1,35 +1,37 @@
-import css from "./EventCard.module.css";
-
 import { formatDateEvent, formatDateDuration } from "utils/formatDateEvent";
 
 import { MdLocationOn, MdEventNote, MdOutlineAccessTime } from "react-icons/md";
 import { FaUser } from "react-icons/fa";
 import { FaRegCalendarDays } from "react-icons/fa6";
 
+import { EventItem, EventInfo, Chip } from "./EventCard.styled";
+
 export const EventCard = ({ event }) => {
   return (
-    <li className={css.eventCard}>
-      <p className={css.info}>
-        <MdEventNote className={css.icon} size={16} color="grey" />
-        {event.name}
-      </p>
-      <p className={css.info}>
-        <MdLocationOn className={css.icon} size={16} color="grey" />
+    <EventItem>
+      <EventInfo>
+        <MdEventNote size={16} />
+        {event.Name}
+      </EventInfo>
+      <EventInfo>
+        <MdLocationOn size={16} />
         {event.location}
-      </p>
-      <p className={css.info}>
-        <FaUser className={css.icon} size={16} color="grey" />
+      </EventInfo>
+      <EventInfo>
+        <FaUser size={16} />
         {event.speaker}
-      </p>
-      <p className={css.info}>
-        <FaRegCalendarDays className={css.icon} size={16} color="grey" />
+      </EventInfo>
+      <EventInfo>
+        <FaRegCalendarDays size={16} />
         {formatDateEvent(event.time.start)}
-      </p>
-      <p className={css.info}>
-        <MdOutlineAccessTime className={css.icon} size={16} color="grey" />
+      </EventInfo>
+      <EventInfo>
+        <MdOutlineAccessTime size={16} />
         {formatDateDuration(event.time.start, event.time.end)}
-      </p>
-      <div className={`${css.type} ${css[event.type]}`}>{event.type}</div>
-    </li>
+      </EventInfo>
+      <Chip type={event.type}>{event.type}</Chip>
+    </EventItem>
   );
 };
+
+// className={`${css.type} ${css[event.type]}`}

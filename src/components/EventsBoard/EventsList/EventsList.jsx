@@ -1,14 +1,13 @@
-import css from "./EventsList.module.css";
+import { EvenList } from "./EventList.styled";
 
 import { EventCard } from "../EventCard/EventCard";
 
 export const EventsList = ({ events }) => {
-  
   return (
-    <ul className={css.eventsList}>
+    <EvenList>
       {events.map((event) => {
-        return <EventCard key={event.name} event={event} />;
+        return <EventCard key={event.Name} event={event} />;
       })}
-    </ul>
+    </EvenList>
   );
 };

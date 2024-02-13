@@ -1,6 +1,6 @@
 [
   {
-    "name": "XYZ Conference",
+    "Name": "XYZ Conference",
     "location": "City A, USA",
     "speaker": "John Doe",
     "time": {
@@ -10,7 +10,7 @@
     "type": "paid"
   },
   {
-    "name": "ABC Forum",
+    "Name": "ABC Forum",
     "location": "City B, USA",
     "speaker": "Mary Johnson",
     "time": {
@@ -20,7 +20,7 @@
     "type": "free"
   },
   {
-    "name": "MNO Concert",
+    "Name": "MNO Concert",
     "location": "City C, USA",
     "speaker": "Alex Smith",
     "time": {
@@ -30,7 +30,7 @@
     "type": "paid"
   },
   {
-    "name": "Tech Summit",
+    "Name": "Tech Summit",
     "location": "City D, USA",
     "speaker": "Jane Wilson",
     "time": {
@@ -40,7 +40,7 @@
     "type": "free"
   },
   {
-    "name": "Sports Expo",
+    "Name": "Sports Expo",
     "location": "City E, USA",
     "speaker": "Robert Brown",
     "time": {
@@ -50,7 +50,7 @@
     "type": "paid"
   },
   {
-    "name": "Community Workshop",
+    "Name": "Community Workshop",
     "location": "City F, USA",
     "speaker": "Emily Davis",
     "time": {

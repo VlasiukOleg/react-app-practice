@@ -21,6 +21,7 @@ function App() {
         Please update your profile contact information
       </Alert>
       <PageTitle title="Events Board Title" />
+
       <EventsList events={upcomingEvents} />
     </div>
   );
