@@ -2,6 +2,7 @@ import { Alert } from "components/Alert";
 import "./App.css";
 import { PageTitle } from "components/EventsBoard/PageTitle/PageTitle";
 import { EventsList } from "components/EventsBoard/EventsList/EventsList";
+import Counter from "components/Counter(classComponent)/Counter";
 
 import upcomingEvents from "upcoming-events.json";
 
@@ -23,6 +24,7 @@ function App() {
       <PageTitle title="Events Board Title" />
 
       <EventsList events={upcomingEvents} />
+      <Counter />
     </div>
   );
 }
