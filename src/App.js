@@ -4,6 +4,7 @@ import { PageTitle } from "components/EventsBoard/PageTitle/PageTitle";
 import { EventsList } from "components/EventsBoard/EventsList/EventsList";
 import Counter from "components/Counter(classComponent)/Counter";
 import Form from "components/Form(classComponent)/Form";
+import { FormFormikYup } from "components/Form(functionComponent)/FormFormikYup";
 
 import upcomingEvents from "upcoming-events.json";
 
@@ -26,7 +27,8 @@ function App() {
 
       <EventsList events={upcomingEvents} />
       <Counter />
-      <Form />
+      {/* <Form /> */}
+      <FormFormikYup />
     </div>
   );
 }
