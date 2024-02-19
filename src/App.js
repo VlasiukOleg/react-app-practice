@@ -6,6 +6,7 @@ import Counter from "components/Counter(classComponent)/Counter";
 import Form from "components/Form(classComponent)/Form";
 import { FormFormikYup } from "components/Form(functionComponent)/FormFormikYup";
 import { FormHooks } from "components/Form(hooks)/FormHooks";
+import { CounterHooks } from "components/Counter(funcComponent)/CounterHooks";
 
 import upcomingEvents from "upcoming-events.json";
 
@@ -31,6 +32,7 @@ function App() {
       {/* <Form /> */}
       {/* <FormFormikYup /> */}
       <FormHooks />
+      <CounterHooks />
     </div>
   );
 }
