@@ -1,10 +1,22 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { FormUser, FormLabel } from "./FormHooks.styled";
 
+const useLocalStorage = (key, defaultValue) => {
+  const [state, setState] = useState(
+    () => JSON.parse(window.localStorage.getItem(key)) ?? defaultValue
+  );
+
+  useEffect(() => {
+    window.localStorage.setItem(key, JSON.stringify(state));
+  }, [key, state]);
+
+  return [state, setState];
+};
+
 export const FormHooks = () => {
-  const [userName, setUserName] = useState("");
-  const [email, setEmail] = useState("");
+  const [userName, setUserName] = useLocalStorage("userName", "");
+  const [email, setEmail] = useLocalStorage("email", "");
   const [password, setPassword] = useState("");
   const [experience, setExperience] = useState("middle");
   const [agree, setAgree] = useState(false);
