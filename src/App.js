@@ -5,6 +5,7 @@ import { EventsList } from "components/EventsBoard/EventsList/EventsList";
 import Counter from "components/Counter(classComponent)/Counter";
 import Form from "components/Form(classComponent)/Form";
 import { FormFormikYup } from "components/Form(functionComponent)/FormFormikYup";
+import { FormHooks } from "components/Form(hooks)/FormHooks";
 
 import upcomingEvents from "upcoming-events.json";
 
@@ -28,7 +29,8 @@ function App() {
       <EventsList events={upcomingEvents} />
       <Counter />
       {/* <Form /> */}
-      <FormFormikYup />
+      {/* <FormFormikYup /> */}
+      <FormHooks />
     </div>
   );
 }
