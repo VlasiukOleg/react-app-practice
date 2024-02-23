@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useLocation, Link } from "react-router-dom";
 import { fetchNews } from "services/newsApi";
+
+import { MdOutlineArrowBackIos } from "react-icons/md";
 
 const NewsDetails = () => {
   const [newsItem, setNews] = useState({});
   const [isLoading, setIsLoading] = useState(false);
+  const { state } = useLocation();
 
   const { newsId } = useParams();
 
@@ -19,6 +22,8 @@ const NewsDetails = () => {
     })();
   }, [newsId]);
 
+  // console.log(location);
+
   const { urlToImage, description, author } = newsItem;
   return (
     <div>
@@ -26,6 +31,12 @@ const NewsDetails = () => {
         <div>.....Loading news!</div>
       ) : (
         <div>
+          <div>
+            <Link to={state?.from}>
+              <MdOutlineArrowBackIos />
+              Back
+            </Link>
+          </div>
           <img
             src={`${urlToImage}`}
             alt="news info"

@@ -1,4 +1,5 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import { Suspense } from "react";
 
 import { Container, Header, Link } from "./SharedLayout.styled";
 
@@ -14,7 +15,9 @@ export const SharedLayout = () => {
           <Link to="/news">NewsApi</Link>
         </nav>
       </Header>
-      <Outlet />
+      <Suspense fallback={<div>...Loading</div>}>
+        <Outlet />
+      </Suspense>
     </Container>
   );
 };

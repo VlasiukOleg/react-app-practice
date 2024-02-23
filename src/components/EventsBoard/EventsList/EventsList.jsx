@@ -2,7 +2,7 @@ import { EvenList } from "./EventList.styled";
 
 import { EventCard } from "../EventCard/EventCard";
 
-export const EventsList = ({ events }) => {
+const EventsList = ({ events }) => {
   return (
     <EvenList>
       {events.map((event) => {
@@ -11,3 +11,5 @@ export const EventsList = ({ events }) => {
     </EvenList>
   );
 };
+
+export default EventsList;

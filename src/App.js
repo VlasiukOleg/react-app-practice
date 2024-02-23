@@ -1,10 +1,13 @@
 import { Routes, Route, NavLink } from "react-router-dom";
+import { lazy } from "react";
 
 import { Alert } from "components/Alert";
 import { SharedLayout } from "components/SharedLayout/SharedLayout";
 import "./App.css";
 import { PageTitle } from "components/EventsBoard/PageTitle/PageTitle";
-import { EventsList } from "components/EventsBoard/EventsList/EventsList";
+
+// import { EventsList } from "components/EventsBoard/EventsList/EventsList";
+
 import Counter from "components/Counter(classComponent)/Counter";
 import Form from "components/Form(classComponent)/Form";
 import { FormFormikYup } from "components/Form(functionComponent)/FormFormikYup";
@@ -14,6 +17,10 @@ import News from "./pages/News.jsx";
 import NewsDetails from "components/NewsDetails/NewsDetails";
 
 import upcomingEvents from "upcoming-events.json";
+
+const EventsList = lazy(() =>
+  import("./components/EventsBoard/EventsList/EventsList")
+);
 
 function App() {
   return (
